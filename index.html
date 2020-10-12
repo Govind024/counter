@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        
+            <div class="head">
+                <h2>counter</h2>
+            </div>
+            <div class="counter">
+                <p id="demo">0</p>
+            </div>
+            <div class="btn">
+                <button onclick="add()">add</button>
+                <button onclick="sub()">sub</button>
+            </div>
+        
+    </div>
+</body>
+</html>
+
+<script>
+    function add(){
+        var x = document.getElementById('demo').innerText;
+       x = parseInt(x);
+       x++;
+        document.getElementById('demo').innerHTML = x;
+    }
+    function sub(){
+        var x = document.getElementById('demo').innerText;
+       x = parseInt(x);
+       if(x > 0){
+       x--;
+       document.getElementById('demo').innerHTML = x;
+       }
+    }
+</script>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(44, 133, 185);
+    }
+    .box{
+        background-color: rgb(44, 107, 143);
+        border:1px solid white;
+        box-shadow: 3px 3px 6px black;
+        padding:25px;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    h2{
+        letter-spacing: .3rem;
+        color: white;
+    }
+    .counter{
+        margin:15px;
+        font-size:36px;
+        color:rgb(89, 211, 89);
+        font-weight: bolder;
+    }
+    .btn{
+     display: flex;
+     flex-direction: column;  
+     margin-top:10px 
+    }
+    .btn button{
+        outline: none;
+        display:inline-block;
+        background-color: black;
+        border:none;
+        padding:5px 10px;
+        color: white;
+        text-transform: uppercase;
+        margin: 3px 0px;
+        transition: 0.4s;
+    }
+    button:hover{
+        background-color: white;
+        color:black;
+    }
+</style>
